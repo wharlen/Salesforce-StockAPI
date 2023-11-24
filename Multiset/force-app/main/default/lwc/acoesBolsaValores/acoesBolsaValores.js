@@ -47,10 +47,10 @@ export default class AcoesBolsaValores extends LightningElement {
                 return {
                     'id': item.Id,
                     'stock': item.Stock__c,
-                    'low': item.Low__c.toFixed(2),
-                    'high': item.High__c.toFixed(2),
-                    'price': item.Price__c.toFixed(2),
-                    'change': item.Change__c.toFixed(2),
+                    'low': item.Low__c,
+                    'high': item.High__c,
+                    'price': item.Price__c,
+                    'change': item.Change__c,
                     'url': item.URL__c,
                     'lastmodified': item.Ult_Atualizacao__c,
                     'currency': item.Currency__c
