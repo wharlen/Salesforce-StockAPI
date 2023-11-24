@@ -1,0 +1,55 @@
+<template>
+    <div key={acao.stock}>
+        <div class={classe}>
+          <div class="slds-grid slds-grid_align-spread slds-p-vertical_small">
+            <img src={acao.url} alt={acao.stock} class="slds-col slds-size_3-of-12">
+            <h2 class="slds-col slds-size_7-of-12 slds-text-heading_large slds-p-around_small slds-align_absolute-center">{acao.stock}</h2>
+            <!--button class="slds-button_icon slds-button_icon-small slds-col slds-size_1-of-12" aria-haspopup="true" title="Fechar">
+              X
+            </button-->
+            <div class="slds-col slds-size_2-of-12">
+              <lightning-button-icon
+                icon-name="utility:close"
+                variant="bare"
+                title="Excluir"
+                data-stock={acao.stock}
+                data-id={acao.id}
+                onclick={excluir}
+                class="slds-var-m-around_small"
+              ></lightning-button-icon>
+            </div>
+          </div>
+          <div class="slds-grid slds-wrap">
+            <!-- Coluna 1 -->
+            <div class="slds-size_1-of-3">
+              <p>Preço atual</p>
+              <p>Maxima</p>
+              <p>Mínima</p>
+            </div>
+            <!-- Coluna 2 -->
+            <div class="slds-size_1-of-3">
+              <p><lightning-formatted-number value={acao.price} format-style="currency" currency-code={acao.currency}></lightning-formatted-number></p>
+              <p><lightning-formatted-number value={acao.high} format-style="currency" currency-code={acao.currency}></lightning-formatted-number></p>
+              <p><lightning-formatted-number value={acao.low} format-style="currency" currency-code={acao.currency}></lightning-formatted-number></p>
+            </div>
+            <!-- Coluna 3 -->
+            <div class="slds-size_1-of-3">
+              <p>Variação</p>
+              <p class="slds-text-heading_large"><lightning-formatted-number value={acao.change} format-style="percent"></lightning-formatted-number></p>
+            </div>
+          </div>
+          <div class="slds-grid slds-grid_align-end slds-p-vertical_small">
+            <p class="slds-col slds-size_12-of-12 slds-p-top_medium slds-text-align_right" style="font-size: 0.8em;">Última atualização: 
+                <lightning-formatted-date-time
+                value={acao.lastmodified}
+                year="numeric"
+                day="2-digit"
+                month="long"
+                hour="2-digit"
+                minute="2-digit"
+            >
+            </lightning-formatted-date-time></p>
+          </div>
+        </div>
+      </div>
+</template>
