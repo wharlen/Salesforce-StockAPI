@@ -1,6 +1,6 @@
 global class AcoesBolsaValoresScheduler implements Schedulable {
     
-    public static String CRON_EXP = '0 5 * * * * 2050';
+    public static String CRON_EXP = '0 5 * * * ?';
     
     global void execute(SchedulableContext SC) 
     {   

@@ -1,0 +1,12 @@
+AcoesBolsaValoresScheduler sch = new AcoesBolsaValoresScheduler();
+System.schedule('AcoesBolsaValores 1', '0 5 * * * ?', sch);
+System.schedule('AcoesBolsaValores 2', '0 10 * * * ?', sch);
+System.schedule('AcoesBolsaValores 3', '0 15 * * * ?', sch);
+System.schedule('AcoesBolsaValores 4', '0 20 * * * ?', sch);
+System.schedule('AcoesBolsaValores 5', '0 25 * * * ?', sch);
+System.schedule('AcoesBolsaValores 6', '0 30 * * * ?', sch);
+System.schedule('AcoesBolsaValores 7', '0 35 * * * ?', sch);
+System.schedule('AcoesBolsaValores 8', '0 40 * * * ?', sch);
+System.schedule('AcoesBolsaValores 9', '0 45 * * * ?', sch);
+System.schedule('AcoesBolsaValores 10', '0 50 * * * ?', sch);
+System.schedule('AcoesBolsaValores 11', '0 55 * * * ?', sch);
