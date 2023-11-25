@@ -7,46 +7,14 @@
     <lightning-card size="12">
       <lightning-layout horizontal-align="center" multiple-rows="true">
         <lightning-layout-item class="slds-grid slds-grid_align-center slds-col slds-size_12-of-12" padding="around-small">
-          <lightning-button class="" variant="success" onclick={openModal} label="Adicionar Ação" icon-name="utility:send">
+          <lightning-button class="slds-p-right_small" variant="success" onclick={openModal} label="Adicionar Ação" icon-name="utility:send">
           </lightning-button>
+          <lightning-button-icon class="" title="Atualizar ações" onclick={refresh} icon-name="utility:refresh" variant="neutral">
+          </lightning-button-icon>
         </lightning-layout-item>
         <lightning-layout-item class="slds-grid slds-grid_align-left slds-p-around_small slds-col slds-size_12-of-12 slds-wrap" padding="around-small">
           <!-- Caixa 1 -->
           <template for:each={acoes} for:item="acao">
-            <!--div class="slds-col slds-small-size_12-of-12 slds-medium-size_6-of-12 slds-large-size_3-of-12 slds-p-around_medium {}" key={acao.stock}>
-              <div class="slds-box slds-theme_default">
-                <div class="slds-grid slds-grid_align-spread slds-p-vertical_small">
-                  <img src={acao.url} alt={acao.stock} class="slds-col slds-size_3-of-12">
-                  <h2 class="slds-col slds-size_7-of-12 slds-text-heading_large slds-p-around_small slds-align_absolute-center">{acao.stock}</h2>
-                  <div class="slds-col slds-size_2-of-12">
-                    <lightning-button-icon
-                      icon-name="utility:close"
-                      variant=""
-                      title="Excluir"
-                      data-id={acao.Id}
-                      onclick={excluir}
-                      class="slds-var-m-around_small"
-                    ></lightning-button-icon>
-                  </div>
-                </div>
-                <div class="slds-grid slds-wrap">
-                  <div class="slds-size_1-of-3">
-                    <p>Preço atual</p>
-                    <p>Maxima</p>
-                    <p>Mínima</p>
-                  </div>
-                  <div class="slds-size_1-of-3">
-                    <p>R$ {acao.price}</p>
-                    <p>R$ {acao.high}</p>
-                    <p>R$ {acao.low}</p>
-                  </div>
-                  <div class="slds-size_1-of-3">
-                    <p>Variação</p>
-                    <p class="slds-text-heading_large">{acao.change}%</p>
-                  </div>
-                </div>
-              </div>
-            </div-->
             <c-acao-box onshowmodaldel={showModalDel} acao={acao} key={acao.Id}  class="slds-col slds-small-size_12-of-12 slds-medium-size_6-of-12 slds-large-size_3-of-12 slds-p-around_medium"></c-acao-box>
           </template>
         </lightning-layout-item>

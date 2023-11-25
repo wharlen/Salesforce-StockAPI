@@ -60,6 +60,15 @@ export default class AcoesBolsaValores extends LightningElement {
         this.showSpinner = false;
     }
 
+    refresh(event){
+        this.showSpinner = true
+        refreshApex(this.acoes_)
+        .then(()=>{})
+        .finally(()=>{
+            this.showSpinner = false
+        })
+    }
+
     addAcao(event){
         this.showSpinner = true
         criaAcaoUsuario({stock: this.acao})
